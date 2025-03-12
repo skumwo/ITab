@@ -5,9 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/products/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/products/add_product.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/products/confirm_purchase.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/products/product_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/products/success.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITab/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITab/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITab/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITab/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_092939.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_115233.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_115330.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_115427.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_115600.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_115751.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_115901.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_120001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_120059.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_120228.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/products/product_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/product_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +131,7 @@
       <option name="presentableId" value="Default" />
       <updated>1740918741775</updated>
       <workItem from="1740918743216" duration="16151000" />
-      <workItem from="1741589398424" duration="1993000" />
+      <workItem from="1741589398424" duration="15902000" />
     </task>
     <servers />
   </component>
