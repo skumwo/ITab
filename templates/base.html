@@ -19,10 +19,42 @@
             </nav>
             <div class="user-actions">
                 {% if user.is_authenticated %}
-                    <a href="{% url 'profile' %}"><i class="bi bi-person"></i></a>
-                    <a href="{% url 'logout' %}">Logout</a>
+                    <div class="user-menu">
+                        <div class="user-icon">
+                            <i class="bi bi-person"></i>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="{% url 'profile' %}">
+                                    <i class="bi bi-person-circle"></i>
+                                    <strong>{{ user.username }}</strong>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="bi bi-bag"></i> Orders
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="bi bi-heart"></i> Wish List
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="bi bi-wallet2"></i> Payments
+                                </a>
+                            </li>
+                            <li class="logout">
+                                <a href="{% url 'logout' %}">
+                                    <i class="bi bi-box-arrow-left"></i> Logout
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
                 {% else %}
-                    <a href="{% url 'login' %}"><i class="bi bi-person"></i></a>
+                    <a href="{% url 'login' %}"><i class="bi bi-box-arrow-in-right"></i></a>
                     <a href="{% url 'register' %}">Register</a>
                 {% endif %}
                 <a href="#"><i class="bi bi-cart"></i></a>
@@ -30,7 +62,6 @@
         </div>
     </header>
 
-    <!-- Контент -->
     <main class="container">
         {% block content %}{% endblock %}
     </main>
@@ -62,6 +93,5 @@
         </div>
         <p class="footer-bottom">© 2025 ITab. All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>

@@ -104,6 +104,55 @@ nav a {
     height: auto;
 }
 
+/* Форма добавления товара */
+.form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-form .form-group {
+    margin-bottom: 15px;
+}
+
+.product-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.product-form input,
+.product-form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.product-form button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.product-form button:hover {
+    background: #0056b3;
+}
+
 /* Бренды */
 .brands {
     text-align: center;
@@ -142,7 +191,7 @@ footer {
     color: #ccc;
 }
 
-
+/* FAQ */
 .faq-container {
     max-width: 1100px;
     margin: 20px auto;
@@ -232,4 +281,441 @@ footer {
     margin-top: 5px;
     font-size: 16px;
     color: #333;
+}
+
+/* Форма добавления товара */
+.form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.product-form .form-group {
+    margin-bottom: 15px;
+}
+
+.product-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.product-form input,
+.product-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+.product-form input:focus,
+.product-form textarea:focus {
+    border: 1px solid #007bff;
+    outline: none;
+}
+
+.product-form textarea {
+    resize: vertical;
+    height: 80px;
+}
+
+.product-form input[type="file"] {
+    padding: 8px;
+    border: none;
+    background: #f5f5f5;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+}
+
+.product-form input[type="file"]::-webkit-file-upload-button {
+    background: #007bff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.product-form input[type="file"]::-webkit-file-upload-button:hover {
+    background: #0056b3;
+}
+
+.product-form button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.product-form button:hover {
+    background: #0056b3;
+}
+
+
+/* Стили для страницы товара */
+.product-detail {
+    display: flex;
+    gap: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.product-image img {
+    max-width: 300px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.product-info {
+    flex: 1;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.product-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.product-price,
+.product-stock {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.btn-buy {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-buy:hover {
+    background: #218838;
+}
+
+.out-of-stock {
+    color: red;
+    font-weight: bold;
+}
+
+.login-link {
+    color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Форма регистрации */
+.register-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.register-container h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.register-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.register-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.register-form input,
+.register-form select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+.register-form input:focus,
+.register-form select:focus {
+    border: 1px solid #007bff;
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #0056b3;
+}
+
+
+/* Форма логина */
+.login-container {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-container h2 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.login-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.login-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s ease;
+}
+
+.login-form input:focus {
+    border: 1px solid #007bff;
+    outline: none;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: #0056b3;
+}
+
+.register-link {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для списка товаров */
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-card {
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+
+.btn-details {
+    display: inline-block;
+    padding: 10px 20px;
+    background: orange;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn-details:hover {
+    background: darkorange;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.user-icon {
+    cursor: pointer;
+    font-size: 24px;
+    position: relative;
+}
+
+.user-icon::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    width: 40px;
+    height: 50px;
+    background: transparent;
+}
+
+.dropdown-menu {
+    position: absolute;
+
+    right: 0;
+    width: 180px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    padding: 10px;
+    z-index: 100;
+}
+
+/* Показываем меню, когда курсор над .user-menu или над .dropdown-menu */
+.user-menu:hover .dropdown-menu,
+.dropdown-menu:hover {
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-menu li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 8px 10px;
+    transition: background 0.3s;
+}
+
+.dropdown-menu li i {
+    font-size: 18px;
+    margin-right: 10px; /* Отступ между иконкой и текстом */
+    color: black; /* Цвет иконки */
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background: #f0f0f0;
 }

@@ -4,34 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/products/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/products/add_product.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/products/confirm_purchase.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/products/product_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/products/success.html" afterDir="false" />
+    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="продавец и покупатель">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITab/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITab/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITab/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITab/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_092939.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_115233.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_115330.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_115427.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_115600.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_115751.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_115901.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_120001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_120059.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_120228.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/products/add_product.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/add_product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/products/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/product_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/products/product_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/product_list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,18 +36,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "skumwo"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;skumwo&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/skumwo/ITab.git",
-    "accountId": "d570a2af-285b-45d3-978d-0a48667cb1c3"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/skumwo/ITab.git&quot;,
+    &quot;accountId&quot;: &quot;d570a2af-285b-45d3-978d-0a48667cb1c3&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -72,22 +57,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/aruzh/PycharmProjects/ITab",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/aruzh/PycharmProjects/ITab&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ITab" type="Python.DjangoServer" factoryName="Django server">
       <module name="ITab" />
@@ -131,11 +116,25 @@
       <option name="presentableId" value="Default" />
       <updated>1740918741775</updated>
       <workItem from="1740918743216" duration="16151000" />
-      <workItem from="1741589398424" duration="15902000" />
+      <workItem from="1741589398424" duration="31155000" />
+      <workItem from="1742206107727" duration="6970000" />
     </task>
+    <task id="LOCAL-00001" summary="продавец и покупатель">
+      <option name="closed" value="true" />
+      <created>1741768335904</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1741768335904</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="продавец и покупатель" />
+    <option name="LAST_COMMIT_MESSAGE" value="продавец и покупатель" />
   </component>
 </project>

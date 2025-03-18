@@ -1,20 +1,26 @@
 {% extends 'base.html' %}
+
 {% block content %}
-<h2>{{ product.name }}</h2>
-<img src="{{ product.image.url }}" alt="{{ product.name }}">
-<p>{{ product.description }}</p>
-<p>Price: ${{ product.price }}</p>
-<p>Stock: {{ product.stock }}</p>
+<div class="product-detail">
+    <div class="product-image">
+        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+    </div>
+    <div class="product-info">
+        <h2>{{ product.name }}</h2>
+        <p class="product-description">{{ product.description }}</p>
+        <p class="product-price">Price: <strong>${{ product.price }}</strong></p>
+        <p class="product-stock">Stock: <strong>{{ product.stock }}</strong></p>
+        <p>Seller: {{ product.seller.username }}</p>
 
-{% if user.is_authenticated and user.role == "buyer" %}
-    {% if product.stock > 0 %}
-        <a href="{% url 'confirm_purchase' product.id %}" class="btn">Buy</a>
-    {% else %}
-        <p>Out of stock</p>
-    {% endif %}
-{% else %}
-    <p><a href="{% url 'login' %}">Log in to buy</a></p>
-{% endif %}
-    
-
+        {% if user.is_authenticated and user.role == "buyer" %}
+            {% if product.stock > 0 %}
+                <a href="{% url 'confirm_purchase' product.id %}" class="btn-buy">Buy</a>
+            {% else %}
+                <p class="out-of-stock">Out of stock</p>
+            {% endif %}
+        {% else %}
+            <p><a href="{% url 'login' %}" class="login-link">Log in to buy</a></p>
+        {% endif %}
+    </div>
+</div>
 {% endblock %}
