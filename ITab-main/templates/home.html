@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="hero">
+        <h1>ITab</h1>
+        <p>Join the <span class="highlight">digital revolution</span></p>
+        <a href="#" class="btn">Explore More</a>
+    </section>
+
+    <section class="categories">
+        <h2>Categories</h2>
+        <div class="category-list">
+            <div class="category">Accessories</div>
+            <div class="category">Camera</div>
+            <div class="category">Laptop</div>
+            <div class="category">Smart Phone</div>
+            <div class="category">Gaming</div>
+            <div class="category">Smart Watch</div>
+        </div>
+    </section>
+
+    <section class="products">
+        <h2>New Products</h2>
+        <div class="product-list">
+            {% for product in products %}
+                <div class="product-card">
+                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                    <h3>{{ product.name }}</h3>
+                    <p>${{ product.price }}</p>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <section class="brands">
+        <h2>Top Brands</h2>
+        <div class="brand-logos">
+            <span>Apple</span> <span>Samsung</span> <span>Sony</span> <span>Canon</span> <span>Lenovo</span>
+        </div>
+    </section>
+{% endblock %}
