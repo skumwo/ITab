@@ -17,7 +17,10 @@
                 <a href="{% url 'confirm_purchase' product.id %}" class="btn-buy">Buy</a>
             {% else %}
                 <p class="out-of-stock">Out of stock</p>
-            {% endif %}
+            {%endif%}
+        {% elif user.role == "seller" and user == product.seller %}
+                    <a href="{% url 'update_product' product.id %}" class="btn-edit">Редактировать</a>
+                    <a href="{% url 'delete_product' product.id %}" class="btn-delete">Удалить</a>
         {% else %}
             <p><a href="{% url 'login' %}" class="login-link">Log in to buy</a></p>
         {% endif %}

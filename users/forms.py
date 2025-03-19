@@ -25,5 +25,5 @@ class RegisterForm(UserCreationForm):
         try:
             validate_password(password, self.instance)
         except ValidationError:
-            pass  # Отключает проверки Django
+            pass
         return password

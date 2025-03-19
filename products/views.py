@@ -45,6 +45,30 @@ def add_product(request):
     return render(request, 'products/add_product.html', {'form': form})
 
 
+@login_required
+@seller_required
+def update_product(request, pk):
+    product = Product.objects.get(pk=pk)
+    if product.seller != request.user:  # Только собственник товара может редактировать
+        return redirect('product_list')
+    if request.method == 'POST':
+        form = ProductForm(request.POST, instance=product)
+        if form.is_valid():
+            form.save()
+            return redirect('product_list')
+    else:
+        form = ProductForm(instance=product)
+    return render(request, 'products/add_product.html', {'form': form})
+
+# Удаление товара
+@login_required
+@seller_required
+def delete_product(request, pk):
+    product = Product.objects.get(pk=pk)
+    if product.seller == request.user:  # Только собственник товара может удалить
+        product.delete()
+    return redirect('product_list')
+
 
 # Страница подтверждения покупки
 @login_required
