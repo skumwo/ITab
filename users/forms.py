@@ -24,6 +24,7 @@ class RegisterForm(UserCreationForm):
         password = self.cleaned_data.get("password1")
         try:
             validate_password(password, self.instance)
-        except ValidationError:
-            pass
+        except ValidationError as e:
+            self.add_error('password1', e)
+            return None
         return password

@@ -10,8 +10,8 @@ def register(request):
         form = RegisterForm(request.POST)
         if form.is_valid():
             user = form.save(commit=False)
-            user.set_password(form.cleaned_data["password1"])  # Используем password1
-            if not user.is_superuser:  # Чтобы не затронуть суперпользователя
+            user.set_password(form.cleaned_data["password1"])
+            if not user.is_superuser:
                 user.is_staff = user.role == 'admin'
             user.save()
             login(request, user)
