@@ -4,17 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="crud">
-      <change afterPath="$PROJECT_DIR$/cart/serializers.py" afterDir="false" />
+    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="бэк корзины с апишками">
+      <change afterPath="$PROJECT_DIR$/templates/cart/cart.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITab/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITab/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITab/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITab/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/migrations/0002_product_seller.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/migrations/0003_category_cart_product_category_favorite_order_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/serializers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/products/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/product_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/migrations/0002_alter_user_role.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +62,7 @@
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/aruzh/Desktop/exportScheduleFromPlatonus-main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/aruzh/PycharmProjects/ITab/frontend/frontend/src&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -72,6 +71,14 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\aruzh\PycharmProjects\ITab\frontend\frontend\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aruzh\PycharmProjects\ITab\frontend" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="ITab" type="Python.DjangoServer" factoryName="Django server">
       <module name="ITab" />
@@ -121,6 +128,10 @@
       <workItem from="1742376100326" duration="1689000" />
       <workItem from="1742465216194" duration="3429000" />
       <workItem from="1743056410391" duration="357000" />
+      <workItem from="1743344401244" duration="26000" />
+      <workItem from="1743344440197" duration="5063000" />
+      <workItem from="1743397973000" duration="12000" />
+      <workItem from="1743397995253" duration="6589000" />
     </task>
     <task id="LOCAL-00001" summary="продавец и покупатель">
       <option name="closed" value="true" />
@@ -154,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742373403453</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="бэк корзины с апишками">
+      <option name="closed" value="true" />
+      <created>1743337220813</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1743337220813</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,6 +194,7 @@
     <MESSAGE value="продавец и покупатель" />
     <MESSAGE value="акерке го секс" />
     <MESSAGE value="crud" />
-    <option name="LAST_COMMIT_MESSAGE" value="crud" />
+    <MESSAGE value="бэк корзины с апишками" />
+    <option name="LAST_COMMIT_MESSAGE" value="бэк корзины с апишками" />
   </component>
 </project>

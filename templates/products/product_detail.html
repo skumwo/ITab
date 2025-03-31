@@ -18,6 +18,13 @@
             {% else %}
                 <p class="out-of-stock">Out of stock</p>
             {%endif%}
+            
+            <form action="{% url 'add_to_cart' product.id %}" method="post">
+                {% csrf_token %}
+                <input type="number" name="quantity" value="1" min="1" />
+                <button type="submit">Add to Cart</button>
+            </form>
+
         {% elif user.role == "seller" and user == product.seller %}
                     <a href="{% url 'update_product' product.id %}" class="btn-edit">Редактировать</a>
                     <a href="{% url 'delete_product' product.id %}" class="btn-delete">Удалить</a>
