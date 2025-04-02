@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="бэк корзины с апишками">
-      <change afterPath="$PROJECT_DIR$/templates/cart/cart.html" afterDir="false" />
+    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="корзина">
+      <change afterPath="$PROJECT_DIR$/templates/cart/order_success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cart/payment.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITab/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITab/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITab/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITab/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/serializers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/products/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/product_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0002_alter_user_role.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/cart.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +127,8 @@
       <workItem from="1743344401244" duration="26000" />
       <workItem from="1743344440197" duration="5063000" />
       <workItem from="1743397973000" duration="12000" />
-      <workItem from="1743397995253" duration="6589000" />
+      <workItem from="1743397995253" duration="8520000" />
+      <workItem from="1743496742636" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="продавец и покупатель">
       <option name="closed" value="true" />
@@ -173,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743337220813</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="корзина">
+      <option name="closed" value="true" />
+      <created>1743414154000</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1743414154000</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,6 +200,7 @@
     <MESSAGE value="акерке го секс" />
     <MESSAGE value="crud" />
     <MESSAGE value="бэк корзины с апишками" />
-    <option name="LAST_COMMIT_MESSAGE" value="бэк корзины с апишками" />
+    <MESSAGE value="корзина" />
+    <option name="LAST_COMMIT_MESSAGE" value="корзина" />
   </component>
 </project>

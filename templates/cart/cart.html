@@ -33,6 +33,13 @@
 </table>
 
 <p><strong>Total: </strong> ${{ total_price|floatformat:2 }}</p>
+    
+{% if cart_items %}
+<form action="{% url 'process_payment' %}" method="post">
+    {% csrf_token %}
+    <button type="submit">Proceed to Checkout</button>
+</form>
+{% endif %}
 
 <form action="{% url 'clear_cart' %}" method="post">
     {% csrf_token %}

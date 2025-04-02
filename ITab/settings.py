@@ -151,3 +151,6 @@ LOGIN_URL = 'login'
 #         'rest_framework.permissions.IsAuthenticated',
 #     ],
 # }
+
+STRIPE_PUBLISHABLE_KEY = os.getenv('STRIPE_PUBLISHABLE_KEY')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY')
