@@ -35,10 +35,65 @@
 <p><strong>Total: </strong> ${{ total_price|floatformat:2 }}</p>
     
 {% if cart_items %}
-<form action="{% url 'process_payment' %}" method="post">
-    {% csrf_token %}
-    <button type="submit">Proceed to Checkout</button>
-</form>
+    <form action="{% url 'process_payment' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Proceed to Checkout</button>
+    </form>
+    
+    <form id="payment-form">
+        {% csrf_token %}
+        <button id="checkout-button">Оплатить</button>
+    </form>
+    
+    <script src="https://js.stripe.com/v3/"></script>
+    <script type="text/javascript">
+        var stripe = Stripe('STRIPE_PUBLISHABLE_KEY');  // Замените на ваш публичный ключ Stripe
+        var checkoutButton = document.getElementById('checkout-button');
+    
+        checkoutButton.addEventListener('click', function () {
+            fetch('{% url "create_checkout_session" %}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': getCookie('csrftoken')  // Получаем CSRF токен из cookies
+                },
+            })
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (sessionId) {
+                return stripe.redirectToCheckout({ sessionId: sessionId.id });
+            })
+            .then(function (result) {
+                if (result.error) {
+                    alert(result.error.message);
+                }
+            })
+            .catch(function (error) {
+                console.error("Error during checkout: ", error);
+            });
+        });
+    
+        // Функция для получения CSRF токена из cookies
+        function getCookie(name) {
+            let cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                const cookies = document.cookie.split(';');
+                for (let i = 0; i < cookies.length; i++) {
+                    const cookie = cookies[i].trim();
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+    </script>
+
+
+
+    
 {% endif %}
 
 <form action="{% url 'clear_cart' %}" method="post">

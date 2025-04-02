@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="корзина">
-      <change afterPath="$PROJECT_DIR$/templates/cart/order_success.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/cart/payment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cart/cancel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cart/payment_success.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cart/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/cart.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,6 +128,7 @@
       <workItem from="1743397973000" duration="12000" />
       <workItem from="1743397995253" duration="8520000" />
       <workItem from="1743496742636" duration="10000" />
+      <workItem from="1743520129295" duration="7879000" />
     </task>
     <task id="LOCAL-00001" summary="продавец и покупатель">
       <option name="closed" value="true" />
@@ -178,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743414154000</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="корзина">
+      <option name="closed" value="true" />
+      <created>1743579487285</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1743579487285</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
