@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="корзина">
-      <change afterPath="$PROJECT_DIR$/templates/cart/cancel.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/cart/payment_success.html" afterDir="false" />
+    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="оплата со страйп">
+      <change afterPath="$PROJECT_DIR$/api/serializers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITab/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITab/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITab/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITab/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cart/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/cart.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/payment.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +132,10 @@
       <workItem from="1743397995253" duration="8520000" />
       <workItem from="1743496742636" duration="10000" />
       <workItem from="1743520129295" duration="7879000" />
+      <workItem from="1743587557497" duration="3001000" />
+      <workItem from="1743600121897" duration="20000" />
+      <workItem from="1743759634295" duration="3048000" />
+      <workItem from="1744008847869" duration="3703000" />
     </task>
     <task id="LOCAL-00001" summary="продавец и покупатель">
       <option name="closed" value="true" />
@@ -186,7 +193,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743579487285</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="оплата со страйп">
+      <option name="closed" value="true" />
+      <created>1743588712207</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1743588712207</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +224,7 @@
     <MESSAGE value="crud" />
     <MESSAGE value="бэк корзины с апишками" />
     <MESSAGE value="корзина" />
-    <option name="LAST_COMMIT_MESSAGE" value="корзина" />
+    <MESSAGE value="оплата со страйп" />
+    <option name="LAST_COMMIT_MESSAGE" value="оплата со страйп" />
   </component>
 </project>

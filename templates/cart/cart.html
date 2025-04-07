@@ -1,108 +1,104 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Your Cart</h2>
+    <h2>Your Cart</h2>
+    
+    {% if cart_items %}
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in cart_items %}
+            <tr>
+                <td>{{ item.product.name }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>${{ item.product.price }}</td>
+                <td>${{ item.product.price|floatformat:2 }}</td>
+                <td>
+                    <form action="{% url 'remove_from_cart' item.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Remove</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+    <p><strong>Total: </strong> ${{ total_price|floatformat:2 }}</p>
+        
+    {% if cart_items %}
+        <form action="{% url 'process_payment' %}" method="post">
+            {% csrf_token %}
+            <button type="submit">Proceed to Checkout</button>
+        </form>
+        
+        <form id="payment-form">
+            {% csrf_token %}
+            <button type="button" id="checkout-button">Оплатить</button>
+        </form>
 
-{% if cart_items %}
-<table>
-    <thead>
-        <tr>
-            <th>Product</th>
-            <th>Quantity</th>
-            <th>Price</th>
-            <th>Total</th>
-            <th>Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for item in cart_items %}
-        <tr>
-            <td>{{ item.product.name }}</td>
-            <td>{{ item.quantity }}</td>
-            <td>${{ item.product.price }}</td>
-            <td>${{ item.product.price|floatformat:2 }}</td>
-            <td>
-                <form action="{% url 'remove_from_cart' item.id %}" method="post">
-                    {% csrf_token %}
-                    <button type="submit">Remove</button>
-                </form>
-            </td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
-
-<p><strong>Total: </strong> ${{ total_price|floatformat:2 }}</p>
-    
-{% if cart_items %}
-    <form action="{% url 'process_payment' %}" method="post">
-        {% csrf_token %}
-        <button type="submit">Proceed to Checkout</button>
-    </form>
-    
-    <form id="payment-form">
-        {% csrf_token %}
-        <button id="checkout-button">Оплатить</button>
-    </form>
-    
-    <script src="https://js.stripe.com/v3/"></script>
-    <script type="text/javascript">
-        var stripe = Stripe('STRIPE_PUBLISHABLE_KEY');  // Замените на ваш публичный ключ Stripe
-        var checkoutButton = document.getElementById('checkout-button');
-    
-        checkoutButton.addEventListener('click', function () {
-            fetch('{% url "create_checkout_session" %}', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'X-CSRFToken': getCookie('csrftoken')  // Получаем CSRF токен из cookies
-                },
-            })
-            .then(function (response) {
-                return response.json();
-            })
-            .then(function (sessionId) {
-                return stripe.redirectToCheckout({ sessionId: sessionId.id });
-            })
-            .then(function (result) {
-                if (result.error) {
-                    alert(result.error.message);
-                }
-            })
-            .catch(function (error) {
-                console.error("Error during checkout: ", error);
+        
+        <script src="https://js.stripe.com/v3/"></script>
+        <script type="text/javascript">
+            var stripe = Stripe('STRIPE_PUBLISHABLE_KEY');  
+            var checkoutButton = document.getElementById('checkout-button');
+        
+            checkoutButton.addEventListener('click', function () {
+                fetch('{% url "create_checkout_session" %}', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': getCookie('csrftoken')  
+                    },
+                })
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (sessionId) {
+                    return stripe.redirectToCheckout({ sessionId: sessionId.id });
+                })
+                .then(function (result) {
+                    if (result.error) {
+                        alert(result.error.message);
+                    }
+                })
+                .catch(function (error) {
+                    console.error("Error during checkout: ", error);
+                });
             });
-        });
-    
-        // Функция для получения CSRF токена из cookies
-        function getCookie(name) {
-            let cookieValue = null;
-            if (document.cookie && document.cookie !== '') {
-                const cookies = document.cookie.split(';');
-                for (let i = 0; i < cookies.length; i++) {
-                    const cookie = cookies[i].trim();
-                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                        break;
+        
+            function getCookie(name) {
+                let cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    const cookies = document.cookie.split(';');
+                    for (let i = 0; i < cookies.length; i++) {
+                        const cookie = cookies[i].trim();
+                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
                     }
                 }
+                return cookieValue;
             }
-            return cookieValue;
-        }
-    </script>
-
-
-
+        </script>
+    {% endif %}
     
-{% endif %}
-
-<form action="{% url 'clear_cart' %}" method="post">
-    {% csrf_token %}
-    <button type="submit">Clear Cart</button>
-</form>
-
-{% else %}
-<p>Your cart is empty!</p>
-{% endif %}
-<a href="/">Continue Shopping</a>
+    <form action="{% url 'clear_cart' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Clear Cart</button>
+    </form>
+    
+    {% else %}
+    <p>Your cart is empty!</p>
+    {% endif %}
+    <a href="/">Continue Shopping</a>
 {% endblock %}
