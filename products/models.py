@@ -46,7 +46,7 @@ class OrderItem(models.Model):
     seller = models.ForeignKey(User, on_delete=models.CASCADE, related_name="sold_items", null=True, blank=True)
     quantity = models.PositiveIntegerField(default=1)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    status = models.CharField(max_length=50, choices=[('pending', 'Pending'), ('shipped', 'Shipped'), ('delivered', 'Delivered')], default='pending')
+    status = models.CharField(max_length=50, choices=[('pending', 'Pending'), ('shipped', 'Shipped'), ('delivered', 'Delivered'), ('refund_approved', 'Refund Approved'),], default='pending')
     received_at = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
@@ -58,6 +58,8 @@ class Payment(models.Model):
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     status = models.CharField(max_length=50, choices=[('pending', 'Pending'), ('completed', 'Completed'), ('failed', 'Failed')], default='pending')
     created_at = models.DateTimeField(auto_now_add=True)
+    stripe_payment_intent_id = models.CharField(max_length=255, null=True, blank=True)
+    order = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='payments', null=True, blank=True)
 
     def __str__(self):
         return f"Payment {self.id} - {self.status}"
@@ -71,3 +73,12 @@ class SellerPayment(models.Model):
 
     def __str__(self):
         return f"Payment to {self.seller.username} - {self.status}"
+
+class Refund(models.Model):
+    buyer = models.ForeignKey(User, on_delete=models.CASCADE)
+    payment = models.ForeignKey(Payment, on_delete=models.CASCADE)
+    order_item = models.ForeignKey(OrderItem, on_delete=models.CASCADE, null=True, blank=True)  # null = полный возврат
+    reason = models.TextField(blank=True)
+    approved_by_seller = models.BooleanField(null=True)  # None = ожидание, True = одобрено, False = отказ
+    created_at = models.DateTimeField(auto_now_add=True)
+    refunded_at = models.DateTimeField(null=True, blank=True)

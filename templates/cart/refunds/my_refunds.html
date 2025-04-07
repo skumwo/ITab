@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Мои запросы на возврат</h2>
+    
+    {% for refund in refunds %}
+      <div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
+        <p>Товар: {{ refund.order_item.product.name }}</p>
+        <p>Дата запроса: {{ refund.created_at }}</p>
+        <p>Статус:
+          {% if refund.approved_by_seller == True %}
+            ✅ Одобрен (возврат выполнен)
+          {% elif refund.approved_by_seller == False %}
+            ❌ Отклонён
+          {% else %}
+            ⏳ В ожидании ответа продавца
+          {% endif %}
+        </p>
+        <p>Причина: {{ refund.reason|default:"Не указана" }}</p>
+      </div>
+    {% empty %}
+      <p>Вы ещё не запрашивали возврат.</p>
+    {% endfor %}
+
+{% endblock %}

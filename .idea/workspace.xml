@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="апи">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="налаженная оплата">
+      <change afterPath="$PROJECT_DIR$/templates/cart/my_orders.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cart/order_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cart/refunds/my_refunds.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cart/refunds/seller_refunds.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cart/seller_orders.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITab/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITab/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cart/cart.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/cart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cart/payment.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cart/payment_success.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/payment_success.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITab/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITab/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/users/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/users/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +79,7 @@
       <recent name="C:\Users\aruzh\PycharmProjects\ITab\frontend\frontend\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\aruzh\PycharmProjects\ITab\templates\cart" />
       <recent name="C:\Users\aruzh\PycharmProjects\ITab\frontend" />
     </key>
   </component>
@@ -134,7 +141,8 @@
       <workItem from="1743587557497" duration="3001000" />
       <workItem from="1743600121897" duration="20000" />
       <workItem from="1743759634295" duration="3048000" />
-      <workItem from="1744008847869" duration="10105000" />
+      <workItem from="1744008847869" duration="15782000" />
+      <workItem from="1744030913251" duration="5786000" />
     </task>
     <task id="LOCAL-00001" summary="продавец и покупатель">
       <option name="closed" value="true" />
@@ -208,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744014104820</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="налаженная оплата">
+      <option name="closed" value="true" />
+      <created>1744020825262</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1744020825262</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +249,7 @@
     <MESSAGE value="корзина" />
     <MESSAGE value="оплата со страйп" />
     <MESSAGE value="апи" />
-    <option name="LAST_COMMIT_MESSAGE" value="апи" />
+    <MESSAGE value="налаженная оплата" />
+    <option name="LAST_COMMIT_MESSAGE" value="налаженная оплата" />
   </component>
 </project>

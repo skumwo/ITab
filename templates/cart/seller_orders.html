@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Мои проданные товары</h2>
+
+{% for item in items %}
+  <div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
+    <p><strong>Товар:</strong> {{ item.product.name }}</p>
+    <p><strong>Покупатель:</strong> {{ item.order.buyer.username }}</p>
+    <p><strong>Количество:</strong> {{ item.quantity }}</p>
+    <p><strong>Статус:</strong> {{ item.status }}</p>
+  </div>
+{% empty %}
+  <p>У вас пока нет заказов.</p>
+{% endfor %}
+
+<hr>
+
+<h2>Запросы на возврат</h2>
+
+{% for refund in refunds %}
+  <div style="border:1px solid #f99; padding:10px; margin-bottom:10px;">
+    <p><strong>Товар:</strong> {{ refund.order_item.product.name }}</p>
+    <p><strong>Покупатель:</strong> {{ refund.buyer.username }}</p>
+    <p><strong>Причина:</strong> {{ refund.reason|default:"не указана" }}</p>
+    <p><strong>Статус:</strong>
+      {% if refund.approved_by_seller == True %}
+        ✅ Одобрено
+      {% elif refund.approved_by_seller == False %}
+        ❌ Отклонено
+      {% else %}
+        ⏳ В ожидании решения
+        <form method="post" action="{% url 'approve_refund' refund.id %}">
+          {% csrf_token %}
+          <button name="action" value="approve">Одобрить</button>
+          <button name="action" value="reject">Отклонить</button>
+        </form>
+      {% endif %}
+    </p>
+  </div>
+{% empty %}
+  <p>Нет активных возвратов.</p>
+{% endfor %}
+{% endblock %}

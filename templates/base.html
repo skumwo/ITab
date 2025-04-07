@@ -31,9 +31,15 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
-                                    <i class="bi bi-bag"></i> Orders
-                                </a>
+                                {% if user.is_authenticated and user.role == "seller" %}
+                                    <a href="{% url 'seller_orders' %}" class="btn">
+                                        <i class="bi bi-bag"></i> Orders
+                                    </a>
+                                {% else %}
+                                    <a href="{% url 'my_orders' %}" class="btn">
+                                        <i class="bi bi-bag"></i> Orders
+                                    </a>
+                                {% endif %}
                             </li>
                             <li>
                                 <a href="#">
@@ -63,6 +69,13 @@
     </header>
 
     <main class="container">
+        {% if messages %}
+          <ul class="messages">
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
         {% block content %}{% endblock %}
     </main>
 

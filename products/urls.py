@@ -9,4 +9,5 @@ urlpatterns = [
     path('<int:product_id>/buy/', buy_product, name='buy_product'),  # Совершение покупки
     path('product/<int:pk>/edit/', update_product, name='update_product'),
     path('product/<int:pk>/delete/', delete_product, name='delete_product'),
+
 ]

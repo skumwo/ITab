@@ -24,6 +24,7 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('faq/', faq, name='faq'),
     path('profile/', profile, name='profile'),
+
     path('api/', include('api.urls')),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

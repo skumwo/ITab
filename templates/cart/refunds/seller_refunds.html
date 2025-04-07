@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Запросы на возврат</h2>
+
+    {% for refund in refunds %}
+      <div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
+        <p>Товар: {{ refund.order_item.product.name }}</p>
+        <p>Покупатель: {{ refund.buyer.username }}</p>
+        <p>Причина: {{ refund.reason|default:"Не указана" }}</p>
+    
+        <form action="{% url 'approve_refund' refund.id %}" method="post" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit">Одобрить</button>
+        </form>
+    
+        <form action="{% url 'reject_refund' refund.id %}" method="post" style="display:inline;">
+            {% csrf_token %}
+            <button type="submit">Отклонить</button>
+        </form>
+      </div>
+    {% empty %}
+      <p>Нет активных запросов.</p>
+    {% endfor %}
+
+{% endblock %}
