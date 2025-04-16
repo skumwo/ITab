@@ -4,26 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="возврат">
-      <change afterPath="$PROJECT_DIR$/api/permissions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products/utils/logger.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products/utils/observer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products/utils/payment_factory.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/products/utils/sort_strategies.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/notifications.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_cart.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_order.py" afterDir="false" />
+    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="юнит тест, 5 паттернов ооп и пермишнс для апи">
+      <change afterPath="$PROJECT_DIR$/locustfile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_orders_functional.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITab/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITab/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ITab/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITab/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/products/product_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/product_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +140,7 @@
       <workItem from="1744621347070" duration="441000" />
       <workItem from="1744621802980" duration="3107000" />
       <workItem from="1744727102379" duration="1155000" />
-      <workItem from="1744768921924" duration="6374000" />
+      <workItem from="1744768921924" duration="7976000" />
     </task>
     <task id="LOCAL-00001" summary="продавец и покупатель">
       <option name="closed" value="true" />
@@ -246,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744039291837</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="юнит тест, 5 паттернов ооп и пермишнс для апи">
+      <option name="closed" value="true" />
+      <created>1744777999069</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1744777999069</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +265,7 @@
     <MESSAGE value="апи" />
     <MESSAGE value="налаженная оплата" />
     <MESSAGE value="возврат" />
-    <option name="LAST_COMMIT_MESSAGE" value="возврат" />
+    <MESSAGE value="юнит тест, 5 паттернов ооп и пермишнс для апи" />
+    <option name="LAST_COMMIT_MESSAGE" value="юнит тест, 5 паттернов ооп и пермишнс для апи" />
   </component>
 </project>
