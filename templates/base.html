@@ -57,13 +57,15 @@
                                 </a>
                             </li>
                         </ul>
-
+                        
                     </div>
+                    <a href="{% url 'view_cart' %}"><i class="bi bi-cart"></i></a>
+                    <a href="{% url 'my_notifications' %}"><i class="bi bi-bell"></i></a>
                 {% else %}
                     <a href="{% url 'login' %}"><i class="bi bi-box-arrow-in-right"></i></a>
                     <a href="{% url 'register' %}">Register</a>
                 {% endif %}
-                <a href="{% url 'view_cart' %}"><i class="bi bi-cart"></i></a>
+                
             </div>
         </div>
     </header>

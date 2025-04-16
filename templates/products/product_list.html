@@ -1,17 +1,36 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1 class="section-title">Products</h1>
-    <div class="product-list">
-        {% for product in products %}
-            <div class="product-card">
-                <a href="{% url 'product_detail' product.id %}">
-                    <img src="{{ product.image.url }}" alt="{{ product.name }}">
-                </a>
-                <h3>{{ product.name }}</h3>
-                <p class="product-price">${{ product.price }}</p>
-                <a href="{% url 'product_detail' product.id %}" class="btn-details">Details</a>
-            </div>
-        {% endfor %}
-    </div>
+  <h1 class="section-title">Products</h1>
+
+  <!-- Форма фильтра и сортировки -->
+  <form method="get" class="mb-4 d-flex gap-3">
+    <select name="category" class="form-select w-auto" onchange="this.form.submit()">
+      <option value="">All Categories</option>
+      {% for cat in categories %}
+        <option value="{{ cat.id }}" {% if current_category == cat.id %}selected{% endif %}>{{ cat.name }}</option>
+      {% endfor %}
+    </select>
+
+    <select name="sort" class="form-select w-auto" onchange="this.form.submit()">
+      <option value="">No Sorting</option>
+      <option value="newest" {% if current_sort == "newest" %}selected{% endif %}>Newest First</option>
+      <option value="price" {% if current_sort == "price" %}selected{% endif %}>Lowest Price</option>
+    </select>
+  </form>
+
+  <div class="product-list">
+    {% for product in products %}
+      <div class="product-card">
+        <a href="{% url 'product_detail' product.id %}">
+          <img src="{{ product.image.url }}" alt="{{ product.name }}">
+        </a>
+        <h3>{{ product.name }}</h3>
+        <p class="product-price">${{ product.price }}</p>
+        <a href="{% url 'product_detail' product.id %}" class="btn-details">Details</a>
+      </div>
+    {% empty %}
+      <p>No products found.</p>
+    {% endfor %}
+  </div>
 {% endblock %}

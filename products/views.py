@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
-from .models import Product
+from .models import Product, Category
 from .forms import ProductForm
+from products.utils.sort_strategies import sort_by_price, sort_by_newest
+
 
 # Декораторы для проверки ролей
 def seller_required(view_func):
@@ -19,10 +21,35 @@ def buyer_required(view_func):
         return view_func(request, *args, **kwargs)
     return _wrapped_view
 
-# Страница с товарами
+def get_sorted_products(sort_type, queryset):
+    strategies = {
+        "price": sort_by_price,
+        "newest": sort_by_newest
+    }
+    return strategies.get(sort_type, lambda x: x)(queryset)  # если нет совпадения — вернёт как есть
+
 def product_list(request):
+    sort = request.GET.get('sort')
+    category_id = request.GET.get('category')
+
     products = Product.objects.all()
-    return render(request, 'products/product_list.html', {'products': products})
+
+    if category_id:
+        products = products.filter(category_id=category_id)
+
+    if sort:
+        products = get_sorted_products(sort, products)
+
+    categories = Category.objects.all()
+
+    return render(request, 'products/product_list.html', {
+        'products': products,
+        'categories': categories,
+        'current_category': int(category_id) if category_id else None,
+        'current_sort': sort
+    })
+
+
 
 # Страница отдельного продукта
 def product_detail(request, product_id):

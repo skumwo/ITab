@@ -153,19 +153,6 @@ h2 {
     background: #0056b3;
 }
 
-/* Бренды */
-.brands {
-    text-align: center;
-    margin: 40px 0;
-}
-
-.brand-logos {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    font-weight: bold;
-}
-
 /* Футер */
 footer {
     background: #222;

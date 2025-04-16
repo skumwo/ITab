@@ -8,6 +8,7 @@ from users.views import profile
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+from cart.views import my_notifications
 
 schema_view = get_schema_view(
     openapi.Info(title="API Документация", default_version='v1'),
@@ -24,6 +25,7 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('faq/', faq, name='faq'),
     path('profile/', profile, name='profile'),
+    path('notifications/', my_notifications, name='my_notifications'),
 
     path('api/', include('api.urls')),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),

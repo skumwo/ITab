@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if user.is_authenticated %}
+  <div class="container mt-4">
+    <h2>Уведомления</h2>
+
+    {% if notifications %}
+      <ul class="list-group">
+        {% for notification in notifications %}
+          <li class="list-group-item {% if not notification.read %}list-group-item-warning{% endif %}">
+            <div class="d-flex justify-content-between">
+              <span>{{ notification.message }}</span>
+              <small class="text-muted">{{ notification.created_at|date:"d.m.Y H:i" }}</small>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>Уведомлений нет.</p>
+    {% endif %}
+  </div>
+{% else %}
+  <div class="container mt-4">
+    <p>Пожалуйста, <a href="{% url 'login' %}">войдите в систему</a>, чтобы просмотреть уведомления.</p>
+  </div>
+{% endif %}
+
+{% endblock %}

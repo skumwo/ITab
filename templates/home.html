@@ -10,14 +10,12 @@
     <section class="categories">
         <h2>Categories</h2>
         <div class="category-list">
-            <div class="category">Accessories</div>
-            <div class="category">Camera</div>
-            <div class="category">Laptop</div>
-            <div class="category">Smart Phone</div>
-            <div class="category">Gaming</div>
-            <div class="category">Smart Watch</div>
+            {% for category in categories %}
+                <div class="category">{{ category.name }}</div>
+            {% endfor %}
         </div>
     </section>
+
 
     <section class="products">
         <h2>New Products</h2>
@@ -38,10 +36,10 @@
         </div>
     </section>
 
-    <section class="brands">
-        <h2>Top Brands</h2>
-        <div class="brand-logos">
-            <span>Apple</span> <span>Samsung</span> <span>Sony</span> <span>Canon</span> <span>Lenovo</span>
-        </div>
-    </section>
+{#    <section class="brands">#}
+{#        <h2>Top Brands</h2>#}
+{#        <div class="brand-logos">#}
+{#            <span>Apple</span> <span>Samsung</span> <span>Sony</span> <span>Canon</span> <span>Lenovo</span>#}
+{#        </div>#}
+{#    </section>#}
 {% endblock %}
