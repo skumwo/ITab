@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="юнит тест, 5 паттернов ооп и пермишнс для апи">
-      <change afterPath="$PROJECT_DIR$/locustfile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_orders_functional.py" afterDir="false" />
+    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="locust, requirements, testcase">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITab/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITab/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_115330.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_120001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_120228.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/products/Снимок_экрана_2025-03-05_120228_Zi86tXp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,24 +53,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Django Server.ITab.executor": "Run",
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.pycharm.django.structure.promotion.once.per.project": "true",
-    "django.template.preview.state": "SHOW_EDITOR",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/aruzh/PycharmProjects/ITab/frontend/frontend/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Django Server.ITab.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/aruzh/PycharmProjects/ITab/frontend/frontend/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\aruzh\PycharmProjects\ITab\frontend\frontend\src" />
@@ -140,7 +145,8 @@
       <workItem from="1744621347070" duration="441000" />
       <workItem from="1744621802980" duration="3107000" />
       <workItem from="1744727102379" duration="1155000" />
-      <workItem from="1744768921924" duration="7976000" />
+      <workItem from="1744768921924" duration="13759000" />
+      <workItem from="1744865240138" duration="1632000" />
     </task>
     <task id="LOCAL-00001" summary="продавец и покупатель">
       <option name="closed" value="true" />
@@ -238,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744777999069</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="locust, requirements, testcase">
+      <option name="closed" value="true" />
+      <created>1744779521378</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1744779521378</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +280,7 @@
     <MESSAGE value="налаженная оплата" />
     <MESSAGE value="возврат" />
     <MESSAGE value="юнит тест, 5 паттернов ооп и пермишнс для апи" />
-    <option name="LAST_COMMIT_MESSAGE" value="юнит тест, 5 паттернов ооп и пермишнс для апи" />
+    <MESSAGE value="locust, requirements, testcase" />
+    <option name="LAST_COMMIT_MESSAGE" value="locust, requirements, testcase" />
   </component>
 </project>
