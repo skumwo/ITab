@@ -7,8 +7,16 @@
   <div style="border:1px solid #ccc; padding:10px; margin-bottom:10px;">
     <p><strong>Товар:</strong> {{ item.product.name }}</p>
     <p><strong>Покупатель:</strong> {{ item.order.buyer.username }}</p>
+    <p><strong>Дата заказа:</strong> {{ item.order.created_at|date:"d.m.Y H:i" }}</p>
     <p><strong>Количество:</strong> {{ item.quantity }}</p>
     <p><strong>Статус:</strong> {{ item.status }}</p>
+    
+    {% if item.status != "canceled" %}
+      <form method="post" action="{% url 'create_chat' item.id 'orderitem' %}">
+        {% csrf_token %}
+        <button type="submit">Написать покупателю ({{ item.order.buyer.username }})</button>
+      </form>
+    {% endif %}
   </div>
 {% empty %}
   <p>У вас пока нет заказов.</p>
@@ -22,8 +30,9 @@
   <div style="border:1px solid #f99; padding:10px; margin-bottom:10px;">
     <p><strong>Товар:</strong> {{ refund.order_item.product.name }}</p>
     <p><strong>Покупатель:</strong> {{ refund.buyer.username }}</p>
-    <p><strong>Причина:</strong> {{ refund.reason|default:"не указана" }}</p>
-    <p><strong>Статус:</strong>
+    <p><strong>Дата заказа:</strong> {{ refund.order_item.order.created_at|date:"d.m.Y H:i" }}</p>
+    <p><strong>Причина возврата:</strong> {{ refund.reason|default:"не указана" }}</p>
+    <p><strong>Статус возврата:</strong>
       {% if refund.approved_by_seller == True %}
         ✅ Одобрено
       {% elif refund.approved_by_seller == False %}

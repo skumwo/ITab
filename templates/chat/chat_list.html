@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h2>My Chats</h2>
+    <ul class="list-group">
+        {% for chat in chats %}
+            <li class="list-group-item">
+                <a href="{% url 'chat_view' chat.id %}">
+                    {% if chat.buyer == request.user %}
+                        Chat with {{ chat.seller }} about "{{ chat.product.name }}"
+                    {% else %}
+                        Chat with {{ chat.buyer }} about "{{ chat.product.name }}"
+                    {% endif %}
+                </a>
+            </li>
+        {% empty %}
+            <li class="list-group-item">No chats yet.</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

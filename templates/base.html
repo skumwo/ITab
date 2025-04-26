@@ -32,19 +32,25 @@
                             </li>
                             <li>
                                 {% if user.is_authenticated and user.role == "seller" %}
-                                    <a href="{% url 'seller_orders' %}" class="btn">
+                                    <a href="{% url 'seller_orders' %}">
                                         <i class="bi bi-bag"></i> Orders
                                     </a>
                                 {% else %}
-                                    <a href="{% url 'my_orders' %}" class="btn">
+                                    <a href="{% url 'my_orders' %}">
                                         <i class="bi bi-bag"></i> Orders
                                     </a>
                                 {% endif %}
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="{% url 'favorites_list'%}">
                                     <i class="bi bi-heart"></i> Wish List
                                 </a>
+                            </li>
+                            <li>
+                                <a href="{% url 'chat_list' %}">
+                                    <i class="bi bi-chat"></i> My Chats
+                                </a>
+
                             </li>
                             <li class="logout">
                                 <a href="{% url 'logout' %}">

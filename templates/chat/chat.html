@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div id="chat-container">
+        <h3>Chat between {{ chat.seller }} and {{ chat.buyer }} for {{ chat.product.name }}</h3>
+    
+        <div id="messages">
+            {% for message in chat_messages %}
+                <p><strong>{{ message.sender.username }}:</strong> {{ message.text }}</p>
+            {% endfor %}
+        </div>
+
+    
+        <form method="POST">
+            {% csrf_token %}
+            <textarea name="message" id="message-input" placeholder="Write your message"></textarea>
+            <button type="submit" id="send-message">Send</button>
+        </form>
+    </div>
+
+{% endblock %}

@@ -23,6 +23,12 @@
               </form>
             {% endif %}
           </li>
+            <form method="post" action="{% url 'create_chat' product.id 'product' %}">
+                {% csrf_token %}
+                <button type="submit">Написать продавцу</button>
+            </form>
+
+
         {% endif %}
       {% endfor %}
     </ul>

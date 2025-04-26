@@ -31,7 +31,8 @@ INSTALLED_APPS = [
     'cart',
     'api',
     'cloudinary',
-    'cloudinary_storage'
+    'cloudinary_storage',
+    'chat',
 ]
 
 MIDDLEWARE = [

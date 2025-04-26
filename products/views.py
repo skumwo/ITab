@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.core.exceptions import PermissionDenied
-from .models import Product, Category
+from .models import Product, Category, Favorite
+from chat.models import Chat
 from .forms import ProductForm
+from django.urls import reverse
 from products.utils.sort_strategies import sort_by_price, sort_by_newest
+from django.contrib import messages
 
 
-# Декораторы для проверки ролей
 def seller_required(view_func):
     def _wrapped_view(request, *args, **kwargs):
         if request.user.role != 'seller':
@@ -27,6 +29,7 @@ def get_sorted_products(sort_type, queryset):
         "newest": sort_by_newest
     }
     return strategies.get(sort_type, lambda x: x)(queryset)  # если нет совпадения — вернёт как есть
+
 
 def product_list(request):
     sort = request.GET.get('sort')
@@ -49,12 +52,36 @@ def product_list(request):
         'current_sort': sort
     })
 
-
-
-# Страница отдельного продукта
 def product_detail(request, product_id):
     product = get_object_or_404(Product, id=product_id)
-    return render(request, 'products/product_detail.html', {'product': product})
+    chat = None
+    if request.user.is_authenticated:
+        chat = Chat.objects.filter(product=product, buyer=request.user, seller=product.seller).first()
+
+    return render(request, 'products/product_detail.html', {'product': product, 'chat': chat})
+
+@login_required
+def add_to_favorites(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+    favorite, created = Favorite.objects.get_or_create(buyer=request.user, product=product)
+    if created:
+        messages.success(request, f'{product.name} added to favorites.')
+    else:
+        messages.info(request, f'{product.name} is already in your favorites.')
+    return redirect(request.META.get('HTTP_REFERER', reverse('product_detail', args=[product_id])))
+
+
+@login_required
+def remove_from_favorites(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+    Favorite.objects.filter(buyer=request.user, product=product).delete()
+    messages.success(request, f'{product.name} removed from favorites.')
+    return redirect(request.META.get('HTTP_REFERER', 'wishlist')) # Перенаправляем обратно на предыдущую страницу или список избранного
+
+@login_required
+def favorites_list(request):
+    favorites = request.user.favorites.all().select_related('product')
+    return render(request, 'products/wishlist.html', {'favorites': favorites})
 
 
 @login_required
@@ -76,7 +103,7 @@ def add_product(request):
 @seller_required
 def update_product(request, pk):
     product = Product.objects.get(pk=pk)
-    if product.seller != request.user:  # Только собственник товара может редактировать
+    if product.seller != request.user:
         return redirect('product_list')
     if request.method == 'POST':
         form = ProductForm(request.POST, instance=product)

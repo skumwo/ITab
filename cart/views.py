@@ -327,16 +327,14 @@ def seller_orders(request):
     if not request.user.is_seller():
         return redirect('home')
 
-    # Все OrderItem'ы, где продавец — текущий пользователь
-    items = OrderItem.objects.filter(seller=request.user).select_related('order', 'product')
+    items = OrderItem.objects.filter(product__seller=request.user).select_related('order', 'product')
 
-    # Все запросы на возврат по этим товарам
-    refunds = Refund.objects.filter(order_item__seller=request.user).select_related('order_item', 'buyer')
+    refunds = Refund.objects.filter(order_item__product__seller=request.user).select_related('order_item', 'buyer')
 
     return render(request, 'cart/seller_orders.html', {
-        'items': items,
-        'refunds': refunds,
-    })
+            'items': items,
+            'refunds': refunds,
+        })
 
 
 

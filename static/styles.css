@@ -706,3 +706,32 @@ h2 {
 .dropdown-menu li:hover {
     background: #f0f0f0;
 }
+
+.card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+.btn {
+    font-weight: bold;
+}

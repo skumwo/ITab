@@ -4,14 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="статики">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="requirements">
+      <change afterPath="$PROJECT_DIR$/chat/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/chat/chat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/chat/chat_list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/products/wishlist.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ITab/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITab/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ITab/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ITab/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/products/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/products/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/order_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/order_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart/seller_orders.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/seller_orders.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/products/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/products/product_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +156,7 @@
       <workItem from="1744727102379" duration="1155000" />
       <workItem from="1744768921924" duration="13759000" />
       <workItem from="1744865240138" duration="1632000" />
-      <workItem from="1745394814189" duration="10298000" />
+      <workItem from="1745394814189" duration="33723000" />
     </task>
     <task id="LOCAL-00001" summary="продавец и покупатель">
       <option name="closed" value="true" />
@@ -252,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744779521378</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="requirements">
+      <option name="closed" value="true" />
+      <created>1745516329931</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1745516329931</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +299,7 @@
     <MESSAGE value="возврат" />
     <MESSAGE value="юнит тест, 5 паттернов ооп и пермишнс для апи" />
     <MESSAGE value="locust, requirements, testcase" />
-    <option name="LAST_COMMIT_MESSAGE" value="locust, requirements, testcase" />
+    <MESSAGE value="requirements" />
+    <option name="LAST_COMMIT_MESSAGE" value="requirements" />
   </component>
 </project>

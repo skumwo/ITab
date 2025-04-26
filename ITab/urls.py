@@ -19,9 +19,12 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('', home_view, name='home'),
     path('admin/', admin.site.urls),
+
     path('users/', include('users.urls')),
     path('products/', include('products.urls')),
     path('cart/', include('cart.urls')),
+    path('chat/', include('chat.urls')),
+
     path('contact/', contact, name='contact'),
     path('faq/', faq, name='faq'),
     path('profile/', profile, name='profile'),

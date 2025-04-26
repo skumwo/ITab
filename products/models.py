@@ -39,7 +39,7 @@ class Favorite(models.Model):
     buyer = models.ForeignKey(User, on_delete=models.CASCADE, related_name="favorites")
 
     def __str__(self):
-        return f"{self.buyer.username} likes {self.product.name}"
+        return f"{self.buyer} likes {self.product.name}"
 
 class Order(models.Model):
     buyer = models.ForeignKey(User, on_delete=models.CASCADE, related_name="orders")

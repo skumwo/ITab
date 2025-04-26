@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1 class="text-center mt-4">Избранное</h1>
+    {% if favorites %}
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 w-100">
+            {% for favorite in favorites %}
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        {% if favorite.product.image %}
+                            <img src="{{ favorite.product.image.url }}" class="card-img-top" alt="{{ favorite.product.name }}" style="max-height: 200px; object-fit: cover;">
+                        {% else %}
+                            <img src="{% static 'path/to/default-image.jpg' %}" class="card-img-top" alt="No Image" style="max-height: 200px; object-fit: cover;">
+                        {% endif %}
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">{{ favorite.product.name }}</h5>
+                            <p class="card-text">Цена: <strong>${{ favorite.product.price }}</strong></p>
+                            <div class="mt-auto">
+                                <a href="{% url 'product_detail' favorite.product.id %}" class="btn btn-primary btn-sm w-100 mb-2">Подробнее</a>
+                                <form action="{% url 'add_to_cart' favorite.product.id %}" method="post">
+                                    {% csrf_token %}
+                                    <input type="number" name="quantity" value="1" min="1" />
+                                    <button type="submit" class="btn btn-success btn-sm w-100 mb-2">Добавить в корзину</button>
+                                </form>
+                                
+                                <form method="post" action="{% url 'remove_from_favorites' favorite.product.id %}" class="w-100">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-outline-danger btn-sm w-100">Удалить</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p class="text-center">Ваш список избранного пуст.</p>
+    {% endif %}
+{% endblock %}
