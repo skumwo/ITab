@@ -23,10 +23,18 @@
               </form>
             {% endif %}
           </li>
-            <form method="post" action="{% url 'create_chat' product.id 'product' %}">
+            <form method="post" action="{% url 'create_chat' item.id 'orderitem' %}">
                 {% csrf_token %}
                 <button type="submit">Написать продавцу</button>
             </form>
+            {% if item.received_at %}
+              <p>✅ Получено {{ item.received_at|date:"d.m.Y H:i" }}</p>
+            {% else %}
+              <form method="post" action="{% url 'confirm_received' item.id %}">
+                {% csrf_token %}
+                <button type="submit">Подтвердить получение</button>
+              </form>
+            {% endif %}
 
 
         {% endif %}

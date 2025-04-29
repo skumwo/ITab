@@ -315,6 +315,22 @@ def my_orders(request):
     return render(request, 'cart/my_orders.html', {'orders': orders})
 
 
+@login_required
+@require_POST
+def confirm_received(request, order_item_id):
+    order_item = get_object_or_404(OrderItem, id=order_item_id, order__buyer=request.user)
+    order_item.received_at = now()
+    order_item.status = 'delivered'
+    order_item.save()
+
+    # Проверяем: все ли товары в заказе доставлены?
+    order = order_item.order
+    if all(item.status == 'delivered' for item in order.items.all()):
+        order.status = 'completed'
+        order.save()
+
+    return redirect('order_detail', order_id=order.id)
+
 
 @login_required
 def order_detail(request, order_id):
@@ -327,14 +343,18 @@ def seller_orders(request):
     if not request.user.is_seller():
         return redirect('home')
 
-    items = OrderItem.objects.filter(product__seller=request.user).select_related('order', 'product')
+    items = OrderItem.objects.filter(
+        product__seller=request.user
+    ).select_related('order', 'product').order_by('-order__created_at')
 
-    refunds = Refund.objects.filter(order_item__product__seller=request.user).select_related('order_item', 'buyer')
+    refunds = Refund.objects.filter(
+        order_item__product__seller=request.user
+    ).select_related('order_item__order', 'order_item__product', 'buyer').order_by('-order_item__order__created_at')
 
     return render(request, 'cart/seller_orders.html', {
-            'items': items,
-            'refunds': refunds,
-        })
+        'items': items,
+        'refunds': refunds,
+    })
 
 
 
