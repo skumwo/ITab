@@ -735,3 +735,14 @@ h2 {
 .btn {
     font-weight: bold;
 }
+
+.chat-link {
+    font-weight: 500;
+    color: #333;
+}
+
+.chat-link:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+

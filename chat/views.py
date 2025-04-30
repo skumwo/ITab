@@ -3,6 +3,7 @@ from .models import Chat, Message
 from products.models import Product, OrderItem, Order
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponseForbidden
 
 User = get_user_model()
 
@@ -60,3 +61,16 @@ def create_chat(request, id, mode):
 
     return redirect('chat_view', chat_id=chat.id)
 
+
+@login_required
+def delete_chat(request, chat_id):
+    chat = get_object_or_404(Chat, id=chat_id)
+
+    if request.user != chat.seller and request.user != chat.buyer:
+        return HttpResponseForbidden("You are not allowed to delete this chat.")
+
+    if request.method == "POST":
+        chat.delete()
+        return redirect('chat_list')
+
+    return render(request, 'chat/confirm_delete.html', {'chat': chat})

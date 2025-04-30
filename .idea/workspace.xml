@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="чат, избранные">
+    <list default="true" id="e9253d4e-f2e5-42c3-a20c-413d3ad8950e" name="Changes" comment="чат, подтвердить заказ">
+      <change afterPath="$PROJECT_DIR$/templates/chat/confirm_delete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cart/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cart/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cart/order_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart/order_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/chat/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat/chat.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/chat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/chat/chat_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/chat/chat_list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +149,8 @@
       <workItem from="1744768921924" duration="13759000" />
       <workItem from="1744865240138" duration="1632000" />
       <workItem from="1745394814189" duration="33783000" />
-      <workItem from="1745834535698" duration="2362000" />
+      <workItem from="1745834535698" duration="3897000" />
+      <workItem from="1745993615757" duration="2127000" />
     </task>
     <task id="LOCAL-00001" summary="продавец и покупатель">
       <option name="closed" value="true" />
@@ -266,7 +272,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745661666235</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="чат, подтвердить заказ">
+      <option name="closed" value="true" />
+      <created>1745907887450</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1745907887450</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +311,7 @@
     <MESSAGE value="locust, requirements, testcase" />
     <MESSAGE value="requirements" />
     <MESSAGE value="чат, избранные" />
-    <option name="LAST_COMMIT_MESSAGE" value="чат, избранные" />
+    <MESSAGE value="чат, подтвердить заказ" />
+    <option name="LAST_COMMIT_MESSAGE" value="чат, подтвердить заказ" />
   </component>
 </project>

@@ -1,21 +1,44 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container mt-5">
-    <h2>My Chats</h2>
-    <ul class="list-group">
-        {% for chat in chats %}
-            <li class="list-group-item">
-                <a href="{% url 'chat_view' chat.id %}">
+    <h2 class="mb-4">💬 Мои чаты</h2>
+
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Собеседник</th>
+                <th scope="col">Товар</th>
+                <th scope="col">Перейти</th>
+                <th scope="col">Удалить</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for chat in chats %}
+            <tr>
+                <td>
                     {% if chat.buyer == request.user %}
-                        Chat with {{ chat.seller }} about "{{ chat.product.name }}"
+                        {{ chat.seller }}
                     {% else %}
-                        Chat with {{ chat.buyer }} about "{{ chat.product.name }}"
+                        {{ chat.buyer }}
                     {% endif %}
-                </a>
-            </li>
-        {% empty %}
-            <li class="list-group-item">No chats yet.</li>
-        {% endfor %}
-    </ul>
+                </td>
+                <td>{{ chat.product.name }}</td>
+                <td>
+                    <a href="{% url 'chat_view' chat.id %}" class="btn btn-primary btn-sm">Открыть</a>
+                </td>
+                <td>
+                    <form method="post" action="{% url 'delete_chat' chat.id %}" onsubmit="return confirm('Удалить чат?');">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger btn-sm">Удалить</button>
+                    </form>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="4" class="text-center text-muted">Чатов пока нет.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 {% endblock %}

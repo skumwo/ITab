@@ -2,21 +2,27 @@
 {% load static %}
 
 {% block content %}
-    <div id="chat-container">
-        <h3>Chat between {{ chat.seller }} and {{ chat.buyer }} for {{ chat.product.name }}</h3>
-    
-        <div id="messages">
+<div class="container mt-4">
+    <h3 class="mb-4">💬 Чат по товару: <strong>{{ chat.product.name }}</strong></h3>
+
+    <div class="card">
+        <div class="card-body" style="height: 300px; overflow-y: auto;" id="messages">
             {% for message in chat_messages %}
-                <p><strong>{{ message.sender.username }}:</strong> {{ message.text }}</p>
+                <div class="d-flex">
+                    <strong>{{ message.sender.username }}:</strong>
+                    {{ message.text }}
+                    <small class="text-muted" style="float: right;">{{ message.created_at|date:"H:i d.m.Y" }}</small>
+                </div>
             {% endfor %}
         </div>
 
-    
-        <form method="POST">
-            {% csrf_token %}
-            <textarea name="message" id="message-input" placeholder="Write your message"></textarea>
-            <button type="submit" id="send-message">Send</button>
-        </form>
+        <div class="card-footer">
+            <form method="POST" class="d-flex flex-column gap-2">
+                {% csrf_token %}
+                <textarea name="message" class="form-control" rows="2" placeholder="Напишите сообщение..."></textarea>
+                <button type="submit" class="btn btn-primary align-self-end">Отправить</button>
+            </form>
+        </div>
     </div>
-
+</div>
 {% endblock %}
